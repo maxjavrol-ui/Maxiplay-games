@@ -1,0 +1,22 @@
+MAXI PLAY GAMES — PAQUETE WEB
+
+CONTENIDO
+- index.html: catálogo web recuperado del proyecto existente.
+- manifest.webmanifest y icon.svg: datos e icono para instalación tipo aplicación web.
+- sw.js: caché básica para volver a abrir el sitio después de cargarlo una vez.
+
+PUBLICAR GRATIS CON GITHUB PAGES DESDE ANDROID
+1. En Chrome, entrá a https://github.com/ y creá una cuenta o iniciá sesión.
+2. Creá un repositorio nuevo llamado maxiplay-games. Puede ser público.
+3. Dentro del repositorio, tocá Add file > Upload files.
+4. Descomprimí este ZIP en tu teléfono y subí TODOS los archivos de la carpeta (index.html, manifest.webmanifest, icon.svg, sw.js y LEEME.txt). index.html debe quedar en la raíz del repositorio, no dentro de otra carpeta.
+5. Tocá Commit changes.
+6. Abrí Settings > Pages. En Build and deployment elegí Deploy from a branch; seleccioná la rama main y la carpeta /(root), y guardá.
+7. Esperá a que GitHub Pages publique el sitio. La dirección suele ser https://TU-USUARIO.github.io/maxiplay-games/; reemplazá TU-USUARIO por tu nombre real de GitHub. No uses esa dirección hasta que GitHub confirme la publicación.
+8. Abrí la dirección publicada en Chrome. Desde el menú ⋮ podés elegir “Agregar a pantalla principal” si aparece.
+
+IMPORTANTE
+- Este paquete web no es un APK Android.
+- No se ha publicado aún en internet; por eso todavía no existe un enlace público confirmado.
+- El catálogo actual es una selección inicial, no la lista completa de todos los juegos de PS2/PS3.
+- Las capacidades de pendrive son estimaciones. Confirmá compatibilidad, disponibilidad y tamaños antes de cerrar un pedido.

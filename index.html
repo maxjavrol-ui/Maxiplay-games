@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050914">
+<meta name="description" content="Maxiplay Games: catálogo de juegos PS2 y PS3, selección y calculadora de pendrives.">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Maxiplay Games</title>
+<style>
+:root{--bg:#050914;--panel:#0b1425;--panel2:#101f36;--cyan:#31e6ff;--blue:#1677ff;--text:#eef7ff;--muted:#9bb0c9;--line:#18395c;--green:#52f2ad}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#10284c 0,#050914 48%,#03060c 100%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+header{padding:22px 16px 18px;border-bottom:1px solid #153658;background:linear-gradient(120deg,#07101eeb,#0a1a31e8);position:relative;overflow:hidden}
+header:after{content:"";position:absolute;inset:auto -30px -90px auto;width:230px;height:230px;border-radius:50%;background:#00d9ff1b;filter:blur(8px)}
+.wrap{max-width:1100px;margin:auto}.brand{display:flex;align-items:center;gap:12px}.logo{width:52px;height:52px;border:2px solid var(--cyan);border-radius:15px;display:grid;place-items:center;color:var(--cyan);font-size:26px;box-shadow:0 0 22px #00d9ff30;background:#071323}
+h1{font-size:clamp(24px,5vw,36px);letter-spacing:1.4px;margin:0;font-weight:900}h1 span{color:var(--cyan);text-shadow:0 0 18px #00cfff45}.sub{margin:5px 0 0;color:var(--muted);font-size:13px}
+main{max-width:1100px;margin:auto;padding:16px;display:grid;gap:16px}.hero{border:1px solid #164d79;border-radius:18px;padding:18px;background:linear-gradient(125deg,#0c2340,#08111f 65%);box-shadow:0 10px 35px #0005}.eyebrow{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:2px}.hero h2{font-size:clamp(23px,5vw,34px);margin:7px 0}.hero p{color:#bed0e4;margin:0;line-height:1.5}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.chip{border:1px solid #20517d;background:#0a1b30;padding:7px 10px;border-radius:999px;color:#cdefff;font-size:12px}
+.layout{display:grid;grid-template-columns:1fr;gap:16px}.panel{background:linear-gradient(180deg,#0c1729,#08111f);border:1px solid var(--line);border-radius:16px;padding:15px;min-width:0}.panel h3{margin:0 0 12px;font-size:17px}.tabs{display:flex;gap:8px;margin-bottom:12px}.tab,button,select,input{font:inherit}.tab{flex:1;border:1px solid #214b73;background:#0b1a2d;color:#b9d8f5;border-radius:10px;padding:11px;font-weight:800}.tab.active{background:linear-gradient(100deg,#0967d8,#03b8dc);border-color:#40e8ff;color:white;box-shadow:0 0 18px #00bfff20}
+.controls{display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:12px}input,select{width:100%;padding:12px;border:1px solid #234263;border-radius:10px;background:#050d19;color:var(--text);outline:none}input:focus,select:focus{border-color:var(--cyan)}
+.games{display:grid;gap:9px}.game{display:flex;gap:10px;align-items:flex-start;padding:11px;border:1px solid #193653;background:#091525;border-radius:12px}.game input{width:18px;height:18px;margin:3px 0 0;accent-color:#18cfff;flex:0 0 auto}.gamebody{flex:1;min-width:0}.gametitle{font-weight:750;font-size:14px}.meta{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.45}.size{color:var(--cyan);font-weight:800;white-space:nowrap;font-size:12px}.tag{display:inline-block;border:1px solid #24567c;border-radius:5px;padding:2px 5px;color:#9beaff;margin-right:4px}
+.summary{display:grid;grid-template-columns:1fr 1fr;gap:9px}.metric{padding:12px;border-radius:12px;background:#081b30;border:1px solid #194268}.metric small{display:block;color:var(--muted);font-size:11px}.metric strong{display:block;margin-top:4px;font-size:20px;color:var(--cyan)}.pricegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}.price{border:1px solid #1d4264;border-radius:10px;padding:10px;background:#081525}.price b{display:block;font-size:14px}.price span{color:var(--green);font-weight:850;font-size:13px}.price small{display:block;color:var(--muted);font-size:10px;margin-top:3px}
+.actions{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}button{cursor:pointer}.primary,.secondary,.ghost{padding:12px;border-radius:10px;font-weight:800;border:1px solid transparent}.primary{background:linear-gradient(100deg,#0967d8,#03bad5);color:#fff}.secondary{background:#102b46;border-color:#27618a;color:#dff8ff}.ghost{background:transparent;border-color:#29445f;color:#bdd4eb}.note{font-size:11px;color:var(--muted);line-height:1.5;margin-top:10px}.empty{color:var(--muted);padding:20px;text-align:center;border:1px dashed #24415d;border-radius:12px}
+footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.notice{color:#ffd58a}.hide{display:none!important}
+@media(min-width:800px){main{padding:22px}.layout{grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr)}.controls{grid-template-columns:1fr 170px}.actions{grid-template-columns:1fr 1fr}.hero{padding:24px}}
+</style>
+</head>
+<body>
+<header><div class="wrap brand"><div class="logo">✦</div><div><h1>MAXIPLAY <span>GAMES</span></h1><p class="sub">CATÁLOGO GAMER · PS2 + PS3 · ARMÁ TU PEDIDO</p></div></div></header>
+<main>
+<section class="hero"><div class="eyebrow">TU PRÓXIMA PARTIDA EMPIEZA ACÁ</div><h2>Elegí tus juegos.<br><span style="color:var(--cyan)">Calculá tu pendrive.</span></h2><p>Buscá títulos, seleccioná varios y revisá el espacio estimado antes de preparar tu consulta.</p><div class="chips"><span class="chip">⚡ Catálogo seleccionable</span><span class="chip">▣ Capacidad útil real</span><span class="chip">↗ Pedido por WhatsApp</span></div></section>
+<div class="layout">
+<section class="panel">
+<h3>🎮 Catálogo de juegos</h3>
+<div class="tabs"><button class="tab active" id="ps2tab" onclick="setConsole('PS2')">PlayStation 2</button><button class="tab" id="ps3tab" onclick="setConsole('PS3')">PlayStation 3</button></div>
+<div class="controls"><input id="search" placeholder="Buscar juego..." oninput="renderGames()"><select id="category" onchange="renderGames()"><option value="Todos">Todas las categorías</option><option>Acción</option><option>Deportes</option><option>Carreras</option><option>Aventura</option><option>Lucha</option><option>Plataformas</option><option>RPG</option></select></div>
+<div id="games" class="games"></div>
+<p class="note">Los tamaños son estimaciones orientativas y pueden variar según la edición, región y versión. Los formatos indicados son informativos.</p>
+</section>
+<aside class="panel">
+<h3>💾 Calculadora de pendrive</h3>
+<div class="summary"><div class="metric"><small>Juegos elegidos</small><strong id="count">0</strong></div><div class="metric"><small>Espacio estimado</small><strong id="used">0 GB</strong></div><div class="metric"><small>Capacidad útil</small><strong id="usable">—</strong></div><div class="metric"><small>Espacio restante</small><strong id="left">—</strong></div></div>
+<label for="drive" style="display:block;margin:14px 0 6px;font-size:12px;color:var(--muted)">Elegí la capacidad del pendrive</label><select id="drive" onchange="updateSummary()"><option value="16">16 GB — $16.000</option><option value="32">32 GB — $24.000</option><option value="64" selected>64 GB — $32.000</option><option value="128">128 GB — $44.000</option></select>
+<div class="pricegrid"><div class="price"><b>16 GB</b><span>$16.000</span><small>≈ 14,4 GB útiles</small></div><div class="price"><b>32 GB</b><span>$24.000</span><small>≈ 28,8 GB útiles</small></div><div class="price"><b>64 GB</b><span>$32.000</span><small>≈ 57,6 GB útiles</small></div><div class="price"><b>128 GB</b><span>$44.000</span><small>≈ 115,2 GB útiles</small></div></div>
+<p id="capacityNote" class="note"></p>
+<div class="actions"><button class="primary" onclick="sendWhatsApp()">Preparar pedido WhatsApp</button><button class="secondary" onclick="clearSelection()">Limpiar selección</button></div>
+<p class="note">El cálculo reserva aproximadamente un 10% de la capacidad nominal para estimar el espacio útil. El resultado real depende del formato y del sistema de archivos.</p>
+</aside>
+</div>
+</main>
+<footer>MAXIPLAY GAMES · Catálogo informativo. No incluye archivos de juegos. Verificá compatibilidad y espacio antes de preparar cada unidad.</footer>
+<script>
+const prices={16:16000,32:24000,64:32000,128:44000};
+const usableCapacity={16:14.4,32:28.8,64:57.6,128:115.2};
+const games=[
+{c:'PS2',n:'God of War',cat:'Acción',gb:7.8,f:'DVD / ISO'},{c:'PS2',n:'God of War II',cat:'Acción',gb:7.9,f:'DVD / ISO'},
+{c:'PS2',n:'Grand Theft Auto: San Andreas',cat:'Acción',gb:4.2,f:'DVD / ISO'},{c:'PS2',n:'Grand Theft Auto: Vice City',cat:'Acción',gb:3.2,f:'DVD / ISO'},
+{c:'PS2',n:'Gran Turismo 4',cat:'Carreras',gb:3.8,f:'DVD / ISO'},{c:'PS2',n:'Need for Speed: Underground 2',cat:'Carreras',gb:3.0,f:'DVD / ISO'},
+{c:'PS2',n:'Need for Speed: Most Wanted',cat:'Carreras',gb:3.0,f:'DVD / ISO'},{c:'PS2',n:'Burnout 3: Takedown',cat:'Carreras',gb:3.0,f:'DVD / ISO'},
+{c:'PS2',n:'Tekken 5',cat:'Lucha',gb:4.0,f:'DVD / ISO'},{c:'PS2',n:'Mortal Kombat: Armageddon',cat:'Lucha',gb:4.0,f:'DVD / ISO'},
+{c:'PS2',n:'Dragon Ball Z: Budokai Tenkaichi 3',cat:'Lucha',gb:2.9,f:'DVD / ISO'},{c:'PS2',n:'PES 2013',cat:'Deportes',gb:2.8,f:'DVD / ISO'},
+{c:'PS2',n:'Winning Eleven 10',cat:'Deportes',gb:2.5,f:'DVD / ISO'},{c:'PS2',n:'NBA Street Vol. 2',cat:'Deportes',gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:'Tony Hawk’s Underground 2',cat:'Deportes',gb:3.0,f:'DVD / ISO'},{c:'PS2',n:'Resident Evil 4',cat:'Acción',gb:3.2,f:'DVD / ISO'},
+{c:'PS2',n:'Shadow of the Colossus',cat:'Aventura',gb:1.8,f:'DVD / ISO'},{c:'PS2',n:'Prince of Persia: The Sands of Time',cat:'Aventura',gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:'Metal Slug Anthology',cat:'Acción',gb:1.5,f:'DVD / ISO'},{c:'PS2',n:'Kingdom Hearts II',cat:'RPG',gb:3.8,f:'DVD / ISO'},
+{c:'PS2',n:'Final Fantasy X',cat:'RPG',gb:4.0,f:'DVD / ISO'},{c:'PS2',n:'Okami',cat:'Aventura',gb:3.5,f:'DVD / ISO'},
+{c:'PS2',n:'Ratchet & Clank 3',cat:'Plataformas',gb:3.0,f:'DVD / ISO'},{c:'PS2',n:'Jak 3',cat:'Plataformas',gb:3.0,f:'DVD / ISO'},
+{c:'PS2',n:'The Simpsons: Hit & Run',cat:'Aventura',gb:2.5,f:'DVD / ISO'},{c:'PS2',n:'Def Jam: Fight for NY',cat:'Lucha',gb:3.5,f:'DVD / ISO'},
+{c:'PS2',n:'OutRun 2006: Coast 2 Coast',cat:'Carreras',gb:2.8,f:'DVD / ISO'},{c:'PS2',n:'MotoGP 4',cat:'Carreras',gb:2.2,f:'DVD / ISO'},
+{c:'PS2',n:'Silent Hill 2',cat:'Aventura',gb:3.0,f:'DVD / ISO'},{c:'PS2',n:'LEGO Star Wars: The Video Game',cat:'Aventura',gb:2.0,f:'DVD / ISO'},
+{c:'PS3',n:'The Last of Us',cat:'Acción',gb:26.0,f:'PS3 / carpeta o ISO según sistema'},{c:'PS3',n:'Uncharted 2: Among Thieves',cat:'Aventura',gb:19.0,f:'PS3 / carpeta o ISO según sistema'},
+{c:'PS3',n:'Uncharted 3: Drake’s Deception',cat:'Aventura',gb:40.0,f:'PS3 / carpeta o ISO según sistema'},{c:'PS3',n:'God of War III',cat:'Acción',gb:35.0,f:'PS3 / carpeta o ISO según sistema'},
+{c:'PS3',n:'Gran Turismo 6',cat:'Carreras',gb:20.0,f:'PS3 / carpeta o ISO según sistema'},{c:'PS3',n:'Grand Theft Auto V',cat:'Acción',gb:17.0,f:'PS3 / carpeta o ISO según sistema'},
+{c:'PS3',n:'Red Dead Redemption',cat:'Acción',gb:8.0,f:'PS3 / carpeta o ISO según sistema'},{c:'PS3',n:'Batman: Arkham City',cat:'Acción',gb:7.0,f:'PS3 / carpeta o ISO según sistema'},
+{c:'PS3',n:'Mortal Kombat (2011)',cat:'Lucha',gb:8.0,f:'PS3 / carpeta o ISO según sistema'},{c:'PS3',n:'Tekken Tag Tournament 2',cat:'Lucha',gb:8.0,f:'PS3 / carpeta o ISO según sistema'},
+{c:'PS3',n:'PES 2018',cat:'Deportes',gb:8.0,f:'PS3 / carpeta o ISO según sistema'},{c:'PS3',n:'FIFA 19',cat:'Deportes',gb:8.0,f:'PS3 / carpeta o ISO según sistema'},
+{c:'PS3',n:'NBA 2K18',cat:'Deportes',gb:8.0,f:'PS3 / carpeta o ISO según sistema'},{c:'PS3',n:'Need for Speed: Most Wanted (2012)',cat:'Carreras',gb:7.0,f:'PS3 / carpeta o ISO según sistema'},
+{c:'PS3',n:'Burnout Paradise',cat:'Carreras',gb:4.0,f:'PS3 / carpeta o ISO según sistema'},{c:'PS3',n:'Metal Gear Solid 4',cat:'Acción',gb:27.0,f:'PS3 / carpeta o ISO según sistema'},
+{c:'PS3',n:'Persona 5',cat:'RPG',gb:20.0,f:'PS3 / carpeta o ISO según sistema'},{c:'PS3',n:'LittleBigPlanet 2',cat:'Plataformas',gb:8.0,f:'PS3 / carpeta o ISO según sistema'},
+{c:'PS3',n:'Rayman Legends',cat:'Plataformas',gb:4.0,f:'PS3 / carpeta o ISO según sistema'},{c:'PS3',n:'Assassin’s Creed IV: Black Flag',cat:'Aventura',gb:12.0,f:'PS3 / carpeta o ISO según sistema'}
+];
+let currentConsole='PS2';const selected=new Set();
+function setConsole(c){currentConsole=c;document.getElementById('ps2tab').classList.toggle('active',c==='PS2');document.getElementById('ps3tab').classList.toggle('active',c==='PS3');renderGames()}
+function renderGames(){const q=document.getElementById('search').value.trim().toLowerCase(),cat=document.getElementById('category').value;const list=games.filter(g=>g.c===currentConsole&&g.n.toLowerCase().includes(q)&&(cat==='Todos'||g.cat===cat));const box=document.getElementById('games');if(!list.length){box.innerHTML='<div class="empty">No encontramos juegos con esa búsqueda.</div>';return}box.innerHTML=list.map(g=>{const id=games.indexOf(g);return `<label class="game"><input type="checkbox" ${selected.has(id)?'checked':''} onchange="toggleGame(${id},this.checked)"><div class="gamebody"><div class="gametitle">${g.n}</div><div class="meta"><span class="tag">${g.cat}</span><span class="tag">${g.f}</span></div></div><div class="size">≈ ${g.gb} GB</div></label>`}).join('')}
+function toggleGame(id,on){if(on)selected.add(id);else selected.delete(id);updateSummary()}
+function updateSummary(){const chosen=[...selected].map(i=>games[i]);const used=chosen.reduce((a,g)=>a+g.gb,0);const cap=Number(document.getElementById('drive').value),usable=usableCapacity[cap],left=usable-used;document.getElementById('count').textContent=chosen.length;document.getElementById('used').textContent=used.toFixed(1)+' GB';document.getElementById('usable').textContent=usable.toFixed(1)+' GB';document.getElementById('left').textContent=(left>=0?left.toFixed(1):'−'+Math.abs(left).toFixed(1))+' GB';document.getElementById('capacityNote').innerHTML=left>=0?`<span style="color:var(--green)">✓ La selección entra en el cálculo estimado.</span>`:`<span class="notice">⚠ La selección supera la capacidad útil estimada por ${Math.abs(left).toFixed(1)} GB. Probá con una capacidad mayor o elegí menos juegos.</span>`;renderGames()}
+function clearSelection(){selected.clear();renderGames();updateSummary()}
+function sendWhatsApp(){if(!selected.size){alert('Primero seleccioná al menos un juego.');return}const chosen=[...selected].map(i=>games[i]);const cap=Number(document.getElementById('drive').value),used=chosen.reduce((a,g)=>a+g.gb,0);const lines=chosen.map(g=>`• ${g.n} (${g.c}, aprox. ${g.gb} GB)`).join('\\n');const msg=`Hola Maxiplay Games, quiero consultar por este pedido:\\n\\n${lines}\\n\\nTotal estimado: ${used.toFixed(1)} GB\\nPendrive: ${cap} GB (aprox. ${usableCapacity[cap]} GB útiles)\\nPrecio del pendrive: $${prices[cap].toLocaleString('es-AR')}\\n\\n¿Me confirmás compatibilidad, disponibilidad y tamaño final?`;window.open('https://wa.me/5491126442269?text='+encodeURIComponent(msg),'_blank')}
+if('serviceWorker' in navigator && location.protocol.startsWith('http')){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
+renderGames();updateSummary();
+</script>
+</body>
+</html>
