@@ -23,10 +23,25 @@ main{max-width:1100px;margin:auto;padding:16px;display:grid;gap:16px}.hero{borde
 .actions{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}button{cursor:pointer}.primary,.secondary,.ghost{padding:12px;border-radius:10px;font-weight:800;border:1px solid transparent}.primary{background:linear-gradient(100deg,#0967d8,#03bad5);color:#fff}.secondary{background:#102b46;border-color:#27618a;color:#dff8ff}.ghost{background:transparent;border-color:#29445f;color:#bdd4eb}.note{font-size:11px;color:var(--muted);line-height:1.5;margin-top:10px}.empty{color:var(--muted);padding:20px;text-align:center;border:1px dashed #24415d;border-radius:12px}
 footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.notice{color:#ffd58a}.hide{display:none!important}.info-section{display:grid;gap:12px}.info-section>h3{margin:0 0 2px}.info-grid{display:grid;grid-template-columns:1fr;gap:10px}.info-card{border:1px solid var(--line);border-radius:14px;padding:15px;background:linear-gradient(150deg,#0d2038,#08111f)}.info-card h4{margin:0 0 7px;color:var(--cyan);font-size:15px}.info-card p{margin:0;color:#bfd0e3;font-size:13px;line-height:1.55}.contact-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}.linkbtn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:11px 14px;border-radius:10px;background:#102b46;border:1px solid #27618a;color:#e3f9ff;font-size:13px;font-weight:800}.linkbtn.primary-link{background:linear-gradient(100deg,#0967d8,#03bad5);border-color:transparent;color:#fff}.info-note{font-size:11px;color:var(--muted);line-height:1.5;margin:0}@media(min-width:650px){.info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:800px){main{padding:22px}.layout{grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr)}.controls{grid-template-columns:1fr 170px}.actions{grid-template-columns:1fr 1fr}.hero{padding:24px}}
+
+.share-web{margin:18px auto 0;max-width:1120px;padding:0 16px}
+.share-web a{display:flex;align-items:center;justify-content:space-between;gap:16px;text-decoration:none;color:#fff;padding:16px 18px;border:1px solid #16c8ff;border-radius:16px;background:linear-gradient(110deg,rgba(0,167,255,.22),rgba(5,12,29,.96) 60%,rgba(0,225,255,.10));box-shadow:0 0 24px rgba(0,190,255,.13)}
+.share-web a:hover{border-color:#7df0ff;box-shadow:0 0 30px rgba(0,190,255,.25)}
+.share-web .share-copy{display:flex;flex-direction:column;gap:4px}
+.share-web strong{font-size:1rem;letter-spacing:.04em}
+.share-web small{color:#b8d9eb;font-size:.84rem;overflow-wrap:anywhere}
+.share-web .share-cta{flex-shrink:0;padding:10px 13px;border-radius:10px;background:#04baf4;color:#04111e;font-weight:900}
+@media(max-width:520px){.share-web a{align-items:flex-start;flex-direction:column}.share-web .share-cta{align-self:stretch;text-align:center}}
 </style>
 </head>
 <body>
 <header><div class="wrap brand"><div class="logo">✦</div><div><h1>MAXIPLAY <span>GAMES</span></h1><p class="sub">CATÁLOGO GAMER · PS2 + PS3 · ARMÁ TU PEDIDO</p></div></div></header>
+<section class="share-web" aria-label="Compartir Maxi Play Games">
+  <a href="https://maxjavrol-ui.github.io/Maxiplay-games/" target="_blank" rel="noopener noreferrer">
+    <span class="share-copy"><strong>🎮 COMPARTÍ MAXI PLAY GAMES</strong><small>Entrá al catálogo online de PS2 y PS3 y compartí este enlace con tus amigos.</small><small>https://maxjavrol-ui.github.io/Maxiplay-games/</small></span>
+    <span class="share-cta">ABRIR LA WEB ↗</span>
+  </a>
+</section>
 <main>
 <section class="hero"><div class="eyebrow">TU PRÓXIMA PARTIDA EMPIEZA ACÁ</div><h2>Elegí tus juegos.<br><span style="color:var(--cyan)">Calculá tu pendrive.</span></h2><p>Buscá títulos, seleccioná varios y revisá el espacio estimado antes de preparar tu consulta.</p><div class="chips"><span class="chip">⚡ Catálogo seleccionable</span><span class="chip">▣ Capacidad útil real</span><span class="chip">↗ Pedido por WhatsApp</span></div></section>
 <div class="layout">
