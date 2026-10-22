@@ -20,7 +20,7 @@ main{max-width:1100px;margin:auto;padding:16px;display:grid;gap:16px}.hero{borde
 .genre-group{margin:0 0 18px}.genre-heading{font-size:14px;color:var(--cyan);border-bottom:1px solid var(--line);padding:8px 2px;margin:0 0 8px;display:flex;justify-content:space-between}.genre-heading span{color:var(--muted);font-weight:400}.genre-list{display:grid;gap:8px}.cover-wrap{width:54px;min-width:54px;height:74px;border-radius:7px;overflow:hidden;background:#0b1425;border:1px solid var(--line);flex-shrink:0}.game-cover{width:100%;height:100%;object-fit:cover;display:block}.game{align-items:center}.gamebody{min-width:0}.game-cover{color:var(--muted)}
 .games{display:grid;gap:9px}.game{display:flex;gap:10px;align-items:flex-start;padding:11px;border:1px solid #193653;background:#091525;border-radius:12px}.game input{width:18px;height:18px;margin:3px 0 0;accent-color:#18cfff;flex:0 0 auto}.gamebody{flex:1;min-width:0}.gametitle{font-weight:750;font-size:14px}.meta{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.45}.size{color:var(--cyan);font-weight:800;white-space:nowrap;font-size:12px}.tag{display:inline-block;border:1px solid #24567c;border-radius:5px;padding:2px 5px;color:#9beaff;margin-right:4px}
 .summary{display:grid;grid-template-columns:1fr 1fr;gap:9px}.metric{padding:12px;border-radius:12px;background:#081b30;border:1px solid #194268}.metric small{display:block;color:var(--muted);font-size:11px}.metric strong{display:block;margin-top:4px;font-size:20px;color:var(--cyan)}.pricegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}.price{border:1px solid #1d4264;border-radius:10px;padding:10px;background:#081525}.price b{display:block;font-size:14px}.price span{color:var(--green);font-weight:850;font-size:13px}.price small{display:block;color:var(--muted);font-size:10px;margin-top:3px}
-.actions{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}button{cursor:pointer}.primary,.secondary,.ghost{padding:12px;border-radius:10px;font-weight:800;border:1px solid transparent}.primary{background:linear-gradient(100deg,#0967d8,#03bad5);color:#fff}.secondary{background:#102b46;border-color:#27618a;color:#dff8ff}.ghost{background:transparent;border-color:#29445f;color:#bdd4eb}.note{font-size:11px;color:var(--muted);line-height:1.5;margin-top:10px}.empty{color:var(--muted);padding:20px;text-align:center;border:1px dashed #24415d;border-radius:12px}
+.selected-panel{margin-top:14px;padding:12px;border:1px solid #245779;border-radius:12px;background:#071321}.selected-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}.selected-heading h4{font-size:14px;margin:0;color:var(--cyan)}.selected-heading span{font-size:11px;color:var(--muted)}.selected-games{display:grid;gap:7px}.selected-game{display:flex;align-items:center;gap:8px;justify-content:space-between;padding:8px 9px;background:#0b1c30;border:1px solid #1d4264;border-radius:8px;font-size:12px}.selected-game-name{min-width:0;overflow-wrap:anywhere}.selected-game-name small{display:block;color:var(--muted);margin-top:3px}.remove-game{flex:0 0 auto;border:1px solid #6d3b49;background:#301723;color:#ffc6d0;border-radius:7px;padding:5px 8px;font-size:11px}.actions{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}button{cursor:pointer}.primary,.secondary,.ghost{padding:12px;border-radius:10px;font-weight:800;border:1px solid transparent}.primary{background:linear-gradient(100deg,#0967d8,#03bad5);color:#fff}.secondary{background:#102b46;border-color:#27618a;color:#dff8ff}.ghost{background:transparent;border-color:#29445f;color:#bdd4eb}.note{font-size:11px;color:var(--muted);line-height:1.5;margin-top:10px}.empty{color:var(--muted);padding:20px;text-align:center;border:1px dashed #24415d;border-radius:12px}
 footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.notice{color:#ffd58a}.hide{display:none!important}.info-section{display:grid;gap:12px}.info-section>h3{margin:0 0 2px}.info-grid{display:grid;grid-template-columns:1fr;gap:10px}.info-card{border:1px solid var(--line);border-radius:14px;padding:15px;background:linear-gradient(150deg,#0d2038,#08111f)}.info-card h4{margin:0 0 7px;color:var(--cyan);font-size:15px}.info-card p{margin:0;color:#bfd0e3;font-size:13px;line-height:1.55}.contact-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}.linkbtn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:11px 14px;border-radius:10px;background:#102b46;border:1px solid #27618a;color:#e3f9ff;font-size:13px;font-weight:800}.linkbtn.primary-link{background:linear-gradient(100deg,#0967d8,#03bad5);border-color:transparent;color:#fff}.info-note{font-size:11px;color:var(--muted);line-height:1.5;margin:0}@media(min-width:650px){.info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:800px){main{padding:22px}.layout{grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr)}.controls{grid-template-columns:1fr 170px}.actions{grid-template-columns:1fr 1fr}.hero{padding:24px}}
 
@@ -179,6 +179,7 @@ footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.not
 <label for="drive" style="display:block;margin:14px 0 6px;font-size:12px;color:var(--muted)">Elegí la capacidad del pendrive</label><select id="drive" onchange="updateSummary()"><option value="16">16 GB — $16.000</option><option value="32">32 GB — $24.000</option><option value="64" selected>64 GB — $32.000</option><option value="128">128 GB — $44.000</option></select>
 <div class="pricegrid"><div class="price"><b>16 GB</b><span>$16.000</span><small>≈ 14,4 GB útiles</small></div><div class="price"><b>32 GB</b><span>$24.000</span><small>≈ 28,8 GB útiles</small></div><div class="price"><b>64 GB</b><span>$32.000</span><small>≈ 57,6 GB útiles</small></div><div class="price"><b>128 GB</b><span>$44.000</span><small>≈ 115,2 GB útiles</small></div></div>
 <p id="capacityNote" class="note"></p>
+<div class="selected-panel"><div class="selected-heading"><h4>🎮 Tu selección de juegos</h4><span id="selectedCount">0 seleccionados</span></div><div id="selectedGames" class="selected-games"><p class="note">Todavía no seleccionaste juegos. Marcá las casillas del catálogo y van a aparecer acá.</p></div></div>
 <div class="actions"><button class="primary" onclick="sendWhatsApp()">Preparar pedido WhatsApp</button><button class="secondary" onclick="clearSelection()">Limpiar selección</button></div>
 <p class="note">El cálculo reserva aproximadamente un 10% de la capacidad nominal para estimar el espacio útil. El resultado real depende del formato y del sistema de archivos.</p>
 </aside>
@@ -933,7 +934,73 @@ const games=[
 {c:'PS2',n:'Pro Yakyuu Spirits 6',cat:'Deportes',gb:3,f:'DVD / ISO'},
 {c:'PS2',n:'Mario Kart 64 (PS2 Port)',cat:'Carreras',gb:1.5,f:'DVD / ISO'},
 {c:'PS2',n:'Super Smash Bros. (PS2 Port)',cat:'Lucha',gb:2,f:'DVD / ISO'},
-{c:'PS2',n:'Pou (PS2 Port)',cat:'Otros',gb:1,f:'DVD / ISO'}
+{c:'PS2',n:'Pou (PS2 Port)',cat:'Otros',gb:1,f:'DVD / ISO'},
+{c:'PS2',n:"Devil May Cry 3: Dante's Awakening",cat:"Acción",gb:4,f:'DVD / ISO'},
+{c:'PS2',n:"Onimusha: Warlords",cat:"Acción",gb:2,f:'DVD / ISO'},
+{c:'PS2',n:"The Godfather",cat:"Acción",gb:4,f:'DVD / ISO'},
+{c:'PS2',n:"Hulk",cat:"Acción",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Spider-Man",cat:"Acción",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Spider-Man: Friend or Foe",cat:"Acción",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"X-Men Legends",cat:"RPG",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Teenage Mutant Ninja Turtles",cat:"Acción",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Teenage Mutant Ninja Turtles 2: Battle Nexus",cat:"Acción",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Teenage Mutant Ninja Turtles 3: Mutant Nightmare",cat:"Acción",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Psychonauts",cat:"Plataformas",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Ratchet & Clank",cat:"Plataformas",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Ratchet: Deadlocked",cat:"Plataformas",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Sly Cooper and the Thievius Raccoonus",cat:"Plataformas",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Killzone",cat:"Acción",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Medal of Honor: Frontline",cat:"Acción",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Medal of Honor: Rising Sun",cat:"Acción",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Medal of Honor: European Assault",cat:"Acción",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"SOCOM II: U.S. Navy SEALs",cat:"Acción",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"SOCOM 3: U.S. Navy SEALs",cat:"Acción",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Need for Speed: Hot Pursuit 2",cat:"Carreras",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Need for Speed: Underground",cat:"Carreras",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Midnight Club: Street Racing",cat:"Carreras",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Midnight Club II",cat:"Carreras",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"FlatOut",cat:"Carreras",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"FlatOut 2",cat:"Carreras",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Test Drive Unlimited",cat:"Carreras",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Gran Turismo 3: A-Spec",cat:"Carreras",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Tourist Trophy",cat:"Carreras",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"NBA 2K11",cat:"Deportes",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Tony Hawk's Pro Skater 3",cat:"Deportes",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Tony Hawk's Underground",cat:"Deportes",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Tony Hawk's Underground 2",cat:"Deportes",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Tony Hawk's American Wasteland",cat:"Deportes",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Tekken Tag Tournament",cat:"Lucha",gb:2,f:'DVD / ISO'},
+{c:'PS2',n:"Tekken 4",cat:"Lucha",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Soulcalibur III",cat:"Lucha",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Mortal Kombat: Deadly Alliance",cat:"Lucha",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Mortal Kombat: Deception",cat:"Lucha",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Dragon Ball Z: Budokai",cat:"Lucha",gb:2,f:'DVD / ISO'},
+{c:'PS2',n:"Dragon Ball Z: Budokai 2",cat:"Lucha",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Dragon Ball Z: Budokai 3",cat:"Lucha",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Dragon Ball Z: Budokai Tenkaichi",cat:"Lucha",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Dragon Ball Z: Budokai Tenkaichi 2",cat:"Lucha",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Naruto: Ultimate Ninja",cat:"Lucha",gb:2,f:'DVD / ISO'},
+{c:'PS2',n:"Naruto: Ultimate Ninja 2",cat:"Lucha",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Naruto: Ultimate Ninja 3",cat:"Lucha",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Naruto: Ultimate Ninja 4",cat:"Lucha",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Naruto: Ultimate Ninja 5",cat:"Lucha",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Final Fantasy X-2",cat:"RPG",gb:4,f:'DVD / ISO'},
+{c:'PS2',n:"Final Fantasy XII",cat:"RPG",gb:4,f:'DVD / ISO'},
+{c:'PS2',n:"Dark Chronicle",cat:"RPG",gb:4,f:'DVD / ISO'},
+{c:'PS2',n:"The Sims",cat:"Simulación",gb:2,f:'DVD / ISO'},
+{c:'PS2',n:"The Sims 2",cat:"Simulación",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"The Sims 2: Pets",cat:"Simulación",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"The Urbz: Sims in the City",cat:"Simulación",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Theme Park World",cat:"Simulación",gb:2,f:'DVD / ISO'},
+{c:'PS2',n:"Commandos 2: Men of Courage",cat:"Estrategia",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"Romance of the Three Kingdoms VIII",cat:"Estrategia",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"LEGO Batman: The Videogame",cat:"Aventura",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"LEGO Harry Potter: Years 1–4",cat:"Aventura",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"LEGO Pirates of the Caribbean: The Video Game",cat:"Aventura",gb:2.5,f:'DVD / ISO'},
+{c:'PS2',n:"James Bond 007: Everything or Nothing",cat:"Acción",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Ace Combat 4: Shattered Skies",cat:"Acción",gb:3,f:'DVD / ISO'},
+{c:'PS2',n:"Zone of the Enders",cat:"Acción",gb:2,f:'DVD / ISO'},
+{c:'PS2',n:"Zone of the Enders: The 2nd Runner",cat:"Acción",gb:3,f:'DVD / ISO'}
 ];
 let currentConsole='PS2';const selected=new Set();
 function setConsole(c){currentConsole=c;document.getElementById('ps2tab').classList.toggle('active',c==='PS2');document.getElementById('ps3tab').classList.toggle('active',c==='PS3');renderGames()}
@@ -993,7 +1060,9 @@ async function loadGameCover(img){
  }catch(e){}
 }
 function toggleGame(id,on){if(on)selected.add(id);else selected.delete(id);updateSummary()}
-function updateSummary(){const chosen=[...selected].map(i=>games[i]);const used=chosen.reduce((a,g)=>a+g.gb,0);const cap=Number(document.getElementById('drive').value),usable=usableCapacity[cap],left=usable-used;document.getElementById('count').textContent=chosen.length;document.getElementById('used').textContent=used.toFixed(1)+' GB';document.getElementById('usable').textContent=usable.toFixed(1)+' GB';document.getElementById('left').textContent=(left>=0?left.toFixed(1):'−'+Math.abs(left).toFixed(1))+' GB';document.getElementById('capacityNote').innerHTML=left>=0?`<span style="color:var(--green)">✓ La selección entra en el cálculo estimado.</span>`:`<span class="notice">⚠ La selección supera la capacidad útil estimada por ${Math.abs(left).toFixed(1)} GB. Probá con una capacidad mayor o elegí menos juegos.</span>`;renderGames()}
+function renderSelectedGames(){const chosen=[...selected].map(i=>({id:i,...games[i]})).sort((a,b)=>a.c.localeCompare(b.c)||a.n.localeCompare(b.n,'es'));const box=document.getElementById('selectedGames');const count=document.getElementById('selectedCount');if(!box||!count)return;count.textContent=chosen.length+' seleccionados';if(!chosen.length){box.innerHTML='<p class="note">Todavía no seleccionaste juegos. Marcá las casillas del catálogo y van a aparecer acá.</p>';return}box.innerHTML=chosen.map(g=>'<div class="selected-game"><div class="selected-game-name"><strong>'+escapeText(g.n)+'</strong><small>'+g.c+' · '+g.cat+' · aprox. '+g.gb+' GB</small></div><button class="remove-game" type="button" onclick="toggleGame('+g.id+',false)" aria-label="Quitar '+escapeText(g.n)+'">Quitar</button></div>').join('')}
+function escapeText(value){return String(value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\"/g,'&quot;').replace(/'/g,'&#39;')}
+function updateSummary(){const chosen=[...selected].map(i=>games[i]);const used=chosen.reduce((a,g)=>a+g.gb,0);const cap=Number(document.getElementById('drive').value),usable=usableCapacity[cap],left=usable-used;document.getElementById('count').textContent=chosen.length;document.getElementById('used').textContent=used.toFixed(1)+' GB';document.getElementById('usable').textContent=usable.toFixed(1)+' GB';document.getElementById('left').textContent=(left>=0?left.toFixed(1):'−'+Math.abs(left).toFixed(1))+' GB';document.getElementById('capacityNote').innerHTML=left>=0?`<span style="color:var(--green)">✓ La selección entra en el cálculo estimado.</span>`:`<span class="notice">⚠ La selección supera la capacidad útil estimada por ${Math.abs(left).toFixed(1)} GB. Probá con una capacidad mayor o elegí menos juegos.</span>`;renderSelectedGames();renderGames()}
 function clearSelection(){selected.clear();renderGames();updateSummary()}
 function sendWhatsApp(){if(!selected.size){alert('Primero seleccioná al menos un juego.');return}const chosen=[...selected].map(i=>games[i]);const cap=Number(document.getElementById('drive').value),used=chosen.reduce((a,g)=>a+g.gb,0);const lines=chosen.map(g=>`• ${g.n} (${g.c}, aprox. ${g.gb} GB)`).join('\n');const msg=`Hola Maxi Play Games, quiero consultar por este pedido:\n\n${lines}\n\nTotal estimado: ${used.toFixed(1)} GB\nPendrive: ${cap} GB (aprox. ${usableCapacity[cap]} GB útiles)\nPrecio del pendrive: ${prices[cap].toLocaleString('es-AR')}\n\n¿Me confirmás compatibilidad, disponibilidad y tamaño final?`;window.open('https://wa.me/5491126442269?text='+encodeURIComponent(msg),'_blank','noopener,noreferrer')}
 if('serviceWorker' in navigator && location.protocol.startsWith('http')){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
