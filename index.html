@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#050914">
-<meta name="description" content="Maxiplay Games: catálogo de juegos PS2 y PS3, selección y calculadora de pendrives.">
+<meta name="description" content="Maxiplay Games: precios de pendrives, flash PS3 por $30.000 y catálogo de juegos PS2 y PS3.">
 <link rel="manifest" href="manifest.webmanifest">
 <title>Maxiplay Games</title>
 <style>
@@ -32,10 +32,59 @@ footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.not
 .share-web small{color:#b8d9eb;font-size:.84rem;overflow-wrap:anywhere}
 .share-web .share-cta{flex-shrink:0;padding:10px 13px;border-radius:10px;background:#04baf4;color:#04111e;font-weight:900}
 @media(max-width:520px){.share-web a{align-items:flex-start;flex-direction:column}.share-web .share-cta{align-self:stretch;text-align:center}}
+.top-offers{max-width:1120px;margin:18px auto 0;padding:0 16px}
+.top-offers-inner{border:1px solid #1b5880;border-radius:18px;padding:17px;background:linear-gradient(135deg,#0d2038,#07101e 70%);box-shadow:0 12px 30px #0005}
+.offer-heading h2{margin:5px 0 4px;font-size:clamp(21px,4vw,29px)}
+.offer-heading p{margin:0 0 14px;color:#b8cce0;font-size:13px;line-height:1.5}
+.offer-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.offer-card{border:1px solid #244a6b;border-radius:14px;padding:14px;background:#081525}
+.offer-card h3{margin:0 0 12px;font-size:17px}
+.usb-prices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.usb-prices>div{padding:11px;border:1px solid #1d4264;border-radius:10px;background:#0a1c30}
+.usb-prices b,.usb-prices strong,.usb-prices small{display:block}
+.usb-prices b{font-size:12px;color:#d7e9fa}
+.usb-prices strong{font-size:17px;color:var(--green);margin:3px 0}
+.usb-prices small{font-size:10px;color:var(--muted)}
+.ps3-offer{border-color:#168cc1;background:linear-gradient(150deg,#0d2744,#08111f)}
+.price-label{display:inline-block;color:#8ceeff;font-size:10px;font-weight:900;letter-spacing:1.5px;margin-bottom:7px}
+.big-price{font-size:clamp(29px,5vw,38px);font-weight:950;color:var(--cyan);margin:-4px 0 8px}
+.ps3-offer ul{margin:0;padding-left:19px;color:#d0deed;font-size:13px;line-height:1.6}
+.offer-note{color:#9bb0c9;font-size:11px;line-height:1.5;margin:10px 0}
+.offer-contact{display:inline-flex;text-decoration:none;background:linear-gradient(100deg,#0967d8,#03bad5);color:#fff;font-weight:850;font-size:12px;padding:10px 13px;border-radius:9px}
+@media(min-width:760px){.offer-grid{grid-template-columns:1fr 1fr}.top-offers-inner{padding:21px}.usb-prices{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
 <header><div class="wrap brand"><div class="logo">✦</div><div><h1>MAXIPLAY <span>GAMES</span></h1><p class="sub">CATÁLOGO GAMER · PS2 + PS3 · ARMÁ TU PEDIDO</p></div></div></header>
+<section class="top-offers" aria-label="Precios y servicios destacados">
+  <div class="top-offers-inner">
+    <div class="offer-heading"><span class="eyebrow">PRECIOS CLAROS · MAXIPLAY GAMES</span><h2>Elegí tu pendrive o prepará tu PS3</h2><p>Precios visibles desde el inicio para que encuentres rápido lo que necesitás.</p></div>
+    <div class="offer-grid">
+      <article class="offer-card usb-offer">
+        <h3>💾 Pendrives con juegos</h3>
+        <div class="usb-prices">
+          <div><b>16 GB</b><strong>$16.000</strong><small>≈ 14,4 GB útiles</small></div>
+          <div><b>32 GB</b><strong>$24.000</strong><small>≈ 28,8 GB útiles</small></div>
+          <div><b>64 GB</b><strong>$32.000</strong><small>≈ 57,6 GB útiles</small></div>
+          <div><b>128 GB</b><strong>$44.000</strong><small>≈ 115,2 GB útiles</small></div>
+        </div>
+      </article>
+      <article class="offer-card ps3-offer">
+        <span class="price-label">SERVICIO DESTACADO</span>
+        <h3>🔷 Flash de PS3</h3>
+        <div class="big-price">$30.000</div>
+        <ul>
+          <li>Instalación de CFW, si la consola es compatible.</li>
+          <li>Configuración de correo electrónico y usuario.</li>
+          <li>Configuración de tiendas digitales y acceso a contenido gratuito disponible de forma autorizada.</li>
+          <li>Instalación y orientación sobre programas para gestionar contenido y formatos compatibles.</li>
+        </ul>
+        <p class="offer-note">La compatibilidad depende del modelo y la versión del sistema. Las tiendas, aplicaciones y funciones disponibles pueden variar.</p>
+        <a class="offer-contact" href="https://wa.me/5491126442269?text=Hola%2C%20quiero%20consultar%20por%20el%20flash%20de%20PS3%20de%20%2430.000" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp ↗</a>
+      </article>
+    </div>
+  </div>
+</section>
 <section class="share-web" aria-label="Compartir Maxi Play Games">
   <a href="https://maxjavrol-ui.github.io/Maxiplay-games/" target="_blank" rel="noopener noreferrer">
     <span class="share-copy"><strong>🎮 COMPARTÍ MAXI PLAY GAMES</strong><small>Entrá al catálogo online de PS2 y PS3 y compartí este enlace con tus amigos.</small><small>https://maxjavrol-ui.github.io/Maxiplay-games/</small></span>
@@ -66,7 +115,7 @@ footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.not
 <h3 id="servicios-title">🛠️ Servicios y novedades de Maxi Play</h3>
 <div class="info-grid">
 <article class="info-card"><h4>🎮 PS2 · OPL y USB</h4><p>Consultá por opciones de uso de OPL, organización de bibliotecas y preparación de unidades compatibles. La compatibilidad depende del modelo de consola, la configuración y el formato de almacenamiento.</p></article>
-<article class="info-card"><h4>🔷 PS3 · Catálogo y configuración</h4><p>Información y asesoramiento sobre compatibilidad, organización del catálogo y opciones de configuración según el modelo y el sistema de la consola.</p></article>
+<article class="info-card"><h4>🔷 PS3 · Flash por $30.000</h4><p>Incluye instalación de CFW cuando el modelo es compatible, configuración de correo electrónico y usuario, preparación de tiendas digitales para contenido gratuito autorizado y orientación para instalar programas de gestión de contenido en formatos compatibles. Consultá previamente la compatibilidad de tu consola y versión del sistema.</p></article>
 <article class="info-card"><h4>🧰 Mantenimiento y reparación</h4><p>Consultas sobre limpieza, mantenimiento preventivo, cambio de pasta térmica y diagnóstico o reparación de consolas PS2, PS3 y PS4.</p></article>
 <article class="info-card"><h4>⚡ Flash y HEN</h4><p>Sección informativa para consultar por flash, OPL, HEN y organización visual de bibliotecas. Los procedimientos y las funciones disponibles varían según la consola y su configuración.</p></article>
 </div>
