@@ -68,6 +68,9 @@ footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.not
 .maintenance-service h4{color:#ffbd7a}.maintenance-service .offer-contact{margin-top:12px}
 #catalogo-juegos,#mantenimiento-reparacion{scroll-margin-top:14px}
 @media(min-width:760px){.quick-nav-grid{grid-template-columns:1fr 1fr}.quick-maintenance{grid-column:1/-1}.quick-nav-heading{padding-bottom:14px}}
+.console-detail{max-width:1068px;margin:16px auto 0;padding:18px 20px;border:1px solid #267ba4;border-radius:16px;background:radial-gradient(circle at 100% 0,#1474ac2b,transparent 42%),linear-gradient(125deg,#10213b,#070e19);box-shadow:0 12px 26px #0004}
+.console-detail h2{font-size:clamp(20px,4vw,28px);margin:5px 0 8px}.console-detail p{font-size:13px;line-height:1.6;color:#c4d7ea;margin:0}.console-detail-badge{font-size:10px;letter-spacing:1.8px;color:#58e7ff;font-weight:900}.detail-points{display:grid;grid-template-columns:1fr;gap:8px;margin-top:13px}.detail-point{padding:10px 12px;border:1px solid #244c70;border-radius:10px;background:#081727;color:#d9eaff;font-size:12px;line-height:1.5}.detail-point strong{color:#66eaff;display:block;margin-bottom:3px}
+@media(min-width:650px){.console-detail{margin-left:16px;margin-right:16px}.detail-points{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Nueva fachada visual gamer */
 .site-header{background:radial-gradient(circle at 88% 10%,#2630a64a,transparent 24%),linear-gradient(115deg,#080d1c,#101f3d 52%,#07101d);border-bottom:1px solid #2878a8}
 .site-header .brand{position:relative;z-index:1}.header-pixel{margin-left:auto;display:flex;align-items:center;gap:10px;color:#50e7ff;font-size:19px;text-shadow:0 0 15px #20cfff}.header-pixel span:nth-child(2){color:#ff9c4a}.header-pixel span:nth-child(3){color:#b38aff}
@@ -155,6 +158,12 @@ footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.not
 <section class="console-showcase" aria-label="Consolas disponibles">
   <article class="console-tile ps2-tile"><div class="console-drawing ps2-drawing" aria-hidden="true"><span class="draw-logo">PS2</span><span class="draw-line"></span><span class="draw-dot"></span></div><div><strong>PlayStation 2</strong><small>Clásicos · OPL · USB</small></div><span class="tile-symbol">02</span></article>
   <article class="console-tile ps3-tile"><div class="console-drawing ps3-drawing" aria-hidden="true"><span class="draw-logo">PS3</span><span class="draw-line"></span><span class="draw-dot"></span></div><div><strong>PlayStation 3</strong><small>Catálogo · Configuración · HEN/CFW según compatibilidad</small></div><span class="tile-symbol">03</span></article>
+</section>
+<section id="console-detail" class="console-detail hide" aria-live="polite">
+  <div class="console-detail-badge">INFORMACIÓN DE CONSOLA</div>
+  <h2 id="console-detail-title"></h2>
+  <p id="console-detail-copy"></p>
+  <div id="console-detail-points" class="detail-points"></div>
 </section>
 <div class="layout">
 <section class="panel" id="catalogo-juegos">
@@ -935,8 +944,25 @@ function openConsoleSection(c){
  renderGames();
  const title=document.getElementById('catalogo-title');
  if(title)title.textContent=c==='PS2'?'🎮 Catálogo completo de PlayStation 2':'🎮 Catálogo e información de PlayStation 3';
+ const detail=document.getElementById('console-detail');
+ const detailTitle=document.getElementById('console-detail-title');
+ const detailCopy=document.getElementById('console-detail-copy');
+ const points=document.getElementById('console-detail-points');
+ if(detail&&detailTitle&&detailCopy&&points){
+  detail.classList.remove('hide');
+  if(c==='PS2'){
+   detailTitle.textContent='PlayStation 2 · OPL y USB';
+   detailCopy.textContent='Explorá el catálogo de PlayStation 2 por género, buscá títulos y seleccioná juegos para estimar el espacio necesario. También podés consultar por organización de bibliotecas y preparación de unidades compatibles.';
+   points.innerHTML='<div class="detail-point"><strong>Catálogo por géneros</strong>Acción, aventuras, carreras, deportes, lucha y más.</div><div class="detail-point"><strong>OPL y almacenamiento</strong>Orientación sobre OPL, USB y compatibilidad según configuración.</div>';
+  }else{
+   detailTitle.textContent='PlayStation 3 · Catálogo y configuración';
+   detailCopy.textContent='Consultá el catálogo de PlayStation 3 y la información del servicio de flash por $30.000. La disponibilidad de CFW, HEN y funciones de configuración depende del modelo y la versión del sistema.';
+   points.innerHTML='<div class="detail-point"><strong>Flash de PS3 · $30.000</strong>Instalación de CFW cuando sea compatible, configuración de correo y usuario, y orientación sobre tiendas digitales con contenido gratuito autorizado.</div><div class="detail-point"><strong>Programas y formatos</strong>Información sobre herramientas para gestionar contenido compatible. Las funciones disponibles pueden variar según el equipo.</div>';
+  }
+ }
  const catalog=document.getElementById('catalogo-juegos');
- if(catalog)catalog.scrollIntoView({behavior:'smooth',block:'start'});
+ if(detail)detail.scrollIntoView({behavior:'smooth',block:'start'});
+ else if(catalog)catalog.scrollIntoView({behavior:'smooth',block:'start'});
 }
 function openMaintenance(){
  const target=document.getElementById('mantenimiento-reparacion');
