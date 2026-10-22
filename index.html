@@ -53,6 +53,21 @@ footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.not
 .offer-contact{display:inline-flex;text-decoration:none;background:linear-gradient(100deg,#0967d8,#03bad5);color:#fff;font-weight:850;font-size:12px;padding:10px 13px;border-radius:9px}
 @media(min-width:760px){.offer-grid{grid-template-columns:1fr 1fr}.top-offers-inner{padding:21px}.usb-prices{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
+
+.console-quick-nav{max-width:1120px;margin:18px auto 0;padding:0 16px}
+.quick-nav-heading{padding:2px 2px 12px}.quick-nav-heading h2{margin:5px 0;font-size:clamp(22px,4vw,30px)}.quick-nav-heading p{margin:0;color:#b8cce0;font-size:13px;line-height:1.5}
+.quick-nav-grid{display:grid;grid-template-columns:1fr;gap:10px}
+.quick-console{width:100%;min-width:0;display:flex;align-items:center;gap:13px;text-align:left;padding:14px;border:1px solid #2b7195;border-radius:15px;color:#f1f8ff;background:radial-gradient(circle at 20% 50%,#00b8ff22,transparent 44%),linear-gradient(120deg,#10233d,#070e1a);transition:transform .18s,border-color .18s,box-shadow .18s}
+.quick-console:hover{transform:translateY(-2px);border-color:#54eaff;box-shadow:0 8px 25px #00bfff18}.quick-ps3{border-color:#6551a1;background:radial-gradient(circle at 20% 50%,#a36cff22,transparent 44%),linear-gradient(120deg,#191b3b,#070e1a)}.quick-maintenance{border-color:#a76436;background:radial-gradient(circle at 15% 50%,#ff9d4225,transparent 44%),linear-gradient(120deg,#2a1b20,#070e1a)}
+.quick-copy{display:flex;flex-direction:column;gap:5px;flex:1;min-width:0}.quick-copy strong{font-size:14px;line-height:1.3}.quick-copy small{font-size:11px;color:#b8cce0;line-height:1.45}.quick-arrow{font-size:20px;color:#64eaff}.quick-maintenance .quick-arrow{color:#ffb46d}
+.quick-console-art{position:relative;width:78px;height:49px;flex:0 0 78px;display:flex;align-items:center;padding:7px;border:1px solid #a1b3c9;border-radius:4px;background:linear-gradient(145deg,#48576c,#121c2d 70%,#050a12);box-shadow:0 7px 13px #0008;transform:skewY(-7deg)}
+.quick-console-art b{font-size:12px;color:#f2f7ff;letter-spacing:-.5px}.quick-console-art i{display:block;width:23px;height:3px;background:#050a10;border-top:1px solid #7d91a8;margin-left:5px}.quick-console-art em{position:absolute;right:6px;bottom:5px;width:5px;height:5px;border-radius:50%;background:#56eaff}
+.ps3-mini-art{height:41px;border-radius:10px 10px 4px 4px;transform:skewY(4deg);background:repeating-linear-gradient(180deg,#586579 0 2px,#283448 2px 4px,#101725 4px 7px)}
+.maintenance-icon{display:grid;place-items:center;flex:0 0 49px;height:49px;border-radius:12px;background:#ff9e4320;font-size:27px}
+.maintenance-service{border-color:#a76436;background:radial-gradient(circle at 0 0,#ff9d4217,transparent 55%),linear-gradient(150deg,#171b2b,#08111f)}
+.maintenance-service h4{color:#ffbd7a}.maintenance-service .offer-contact{margin-top:12px}
+#catalogo-juegos,#mantenimiento-reparacion{scroll-margin-top:14px}
+@media(min-width:760px){.quick-nav-grid{grid-template-columns:1fr 1fr}.quick-maintenance{grid-column:1/-1}.quick-nav-heading{padding-bottom:14px}}
 /* Nueva fachada visual gamer */
 .site-header{background:radial-gradient(circle at 88% 10%,#2630a64a,transparent 24%),linear-gradient(115deg,#080d1c,#101f3d 52%,#07101d);border-bottom:1px solid #2878a8}
 .site-header .brand{position:relative;z-index:1}.header-pixel{margin-left:auto;display:flex;align-items:center;gap:10px;color:#50e7ff;font-size:19px;text-shadow:0 0 15px #20cfff}.header-pixel span:nth-child(2){color:#ff9c4a}.header-pixel span:nth-child(3){color:#b38aff}
@@ -83,6 +98,14 @@ footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.not
 </head>
 <body>
 <header class="site-header"><div class="wrap brand"><div class="logo">✦</div><div><h1>MAXIPLAY <span>GAMES</span></h1><p class="sub">CATÁLOGO GAMER · PS2 + PS3 · ARMÁ TU PEDIDO</p></div><div class="header-pixel" aria-hidden="true"><span>✦</span><span>●</span><span>◆</span></div></div></header>
+<section class="console-quick-nav" aria-label="Elegí una consola o un servicio">
+  <div class="quick-nav-heading"><span class="eyebrow">EXPLORÁ MAXI PLAY GAMES</span><h2>¿Qué estás buscando?</h2><p>Elegí tu consola para abrir su catálogo o entrá a mantenimiento y reparación.</p></div>
+  <div class="quick-nav-grid">
+    <button class="quick-console quick-ps2" onclick="openConsoleSection('PS2')"><span class="quick-console-art ps2-mini-art" aria-hidden="true"><b>PS2</b><i></i><em></em></span><span class="quick-copy"><strong>PlayStation 2</strong><small>Abrir catálogo completo de PS2</small></span><span class="quick-arrow">↗</span></button>
+    <button class="quick-console quick-ps3" onclick="openConsoleSection('PS3')"><span class="quick-console-art ps3-mini-art" aria-hidden="true"><b>PS3</b><i></i><em></em></span><span class="quick-copy"><strong>PlayStation 3</strong><small>Catálogo e información de PS3</small></span><span class="quick-arrow">↗</span></button>
+    <button class="quick-console quick-maintenance" onclick="openMaintenance()"><span class="maintenance-icon" aria-hidden="true">🛠️</span><span class="quick-copy"><strong>Mantenimiento y reparación de tu consola</strong><small>Limpieza · Pasta térmica · Diagnóstico · Reparación PS2, PS3 y PS4</small></span><span class="quick-arrow">↗</span></button>
+  </div>
+</section>
 <section class="top-offers" aria-label="Precios y servicios destacados">
   <div class="top-offers-inner">
     <div class="offer-heading"><span class="eyebrow">PRECIOS CLAROS · MAXIPLAY GAMES</span><h2>Elegí tu pendrive o prepará tu PS3</h2><p>Precios visibles desde el inicio para que encuentres rápido lo que necesitás.</p></div>
@@ -124,18 +147,18 @@ footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.not
 <div class="hero-art" aria-label="Ilustraciones originales de consolas y controles">
   <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
   <div class="mini-console mini-ps2"><span class="console-mark">PS2</span><span class="console-slot"></span><span class="console-power"></span><small>PLAYSTATION 2</small></div>
-  <div class="mini-console mini-ps3"><span class="console-mark">PS3</span><span class="console-slot"></span><span class="console-power"></span><small>SUPER SLIM</small></div>
+  <div class="mini-console mini-ps3"><span class="console-mark">PS3</span><span class="console-slot"></span><span class="console-power"></span><small>PLAYSTATION 3</small></div>
   <svg class="hero-pad" viewBox="0 0 220 125" role="img" aria-label="Joystick gamer ilustrado"><defs><linearGradient id="padShell" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#32465f"/><stop offset=".55" stop-color="#111e31"/><stop offset="1" stop-color="#060b14"/></linearGradient></defs><path d="M48 35 Q61 20 79 30 L97 40 L123 40 L141 30 Q159 20 172 35 Q188 53 198 88 Q202 104 190 108 Q178 112 166 96 L148 76 L72 76 L54 96 Q42 112 30 108 Q18 104 22 88 Q32 53 48 35Z" fill="url(#padShell)" stroke="#43dcff" stroke-width="2.5"/><path d="M54 50 H76 M65 39 V61" stroke="#b7e9ff" stroke-width="5" stroke-linecap="round"/><circle cx="143" cy="47" r="6" fill="#28c7ff"/><circle cx="162" cy="58" r="6" fill="#ff9b43"/><circle cx="143" cy="68" r="6" fill="#62e8a5"/><circle cx="124" cy="58" r="6" fill="#bc8bff"/><circle cx="85" cy="62" r="11" fill="#080e18" stroke="#607d99" stroke-width="2"/><circle cx="135" cy="84" r="11" fill="#080e18" stroke="#607d99" stroke-width="2"/><path d="M99 42 L121 42" stroke="#647e9b" stroke-width="3" stroke-linecap="round"/></svg>
   <div class="art-spark spark-a">✦</div><div class="art-spark spark-b">✧</div><div class="art-pixel-character" aria-hidden="true"><span class="pixel-head"></span><span class="pixel-body"></span><span class="pixel-arm"></span><span class="pixel-leg"></span></div>
 </div>
 </section>
 <section class="console-showcase" aria-label="Consolas disponibles">
   <article class="console-tile ps2-tile"><div class="console-drawing ps2-drawing" aria-hidden="true"><span class="draw-logo">PS2</span><span class="draw-line"></span><span class="draw-dot"></span></div><div><strong>PlayStation 2</strong><small>Clásicos · OPL · USB</small></div><span class="tile-symbol">02</span></article>
-  <article class="console-tile ps3-tile"><div class="console-drawing ps3-drawing" aria-hidden="true"><span class="draw-logo">PS3</span><span class="draw-line"></span><span class="draw-dot"></span></div><div><strong>PlayStation 3 Super Slim</strong><small>Catálogo · Configuración · HEN/CFW según compatibilidad</small></div><span class="tile-symbol">03</span></article>
+  <article class="console-tile ps3-tile"><div class="console-drawing ps3-drawing" aria-hidden="true"><span class="draw-logo">PS3</span><span class="draw-line"></span><span class="draw-dot"></span></div><div><strong>PlayStation 3</strong><small>Catálogo · Configuración · HEN/CFW según compatibilidad</small></div><span class="tile-symbol">03</span></article>
 </section>
 <div class="layout">
-<section class="panel">
-<h3>🎮 Catálogo de juegos</h3>
+<section class="panel" id="catalogo-juegos">
+<h3 id="catalogo-title">🎮 Catálogo de juegos</h3>
 <div class="tabs"><button class="tab active" id="ps2tab" onclick="setConsole('PS2')">PlayStation 2</button><button class="tab" id="ps3tab" onclick="setConsole('PS3')">PlayStation 3</button></div>
 <div class="controls"><input id="search" placeholder="Buscar juego..." oninput="renderGames()"><select id="category" onchange="renderGames()"><option value="Todos">Todos los géneros</option><option>Acción</option><option>Aventura</option><option>Carreras</option><option>Deportes</option><option>Estrategia</option><option>Lucha</option><option>Música</option><option>Plataformas</option><option>Puzle</option><option>RPG</option><option>Simulación</option><option>Otros</option></select></div>
 <div id="games" class="games"></div>
@@ -156,7 +179,7 @@ footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.not
 <div class="info-grid">
 <article class="info-card"><h4>🎮 PS2 · OPL y USB</h4><p>Consultá por opciones de uso de OPL, organización de bibliotecas y preparación de unidades compatibles. La compatibilidad depende del modelo de consola, la configuración y el formato de almacenamiento.</p></article>
 <article class="info-card"><h4>🔷 PS3 · Flash por $30.000</h4><p>Incluye instalación de CFW cuando el modelo es compatible, configuración de correo electrónico y usuario, preparación de tiendas digitales para contenido gratuito autorizado y orientación para instalar programas de gestión de contenido en formatos compatibles. Consultá previamente la compatibilidad de tu consola y versión del sistema.</p></article>
-<article class="info-card"><h4>🧰 Mantenimiento y reparación</h4><p>Consultas sobre limpieza, mantenimiento preventivo, cambio de pasta térmica y diagnóstico o reparación de consolas PS2, PS3 y PS4.</p></article>
+<article class="info-card maintenance-service" id="mantenimiento-reparacion"><h4>🧰 Mantenimiento y reparación de tu consola</h4><p>Servicio para consolas PS2, PS3 y PS4: limpieza interna, mantenimiento preventivo, cambio de pasta térmica, revisión de temperatura, diagnóstico de fallas y reparación según el problema detectado. Consultá por WhatsApp para evaluar tu equipo.</p><a class="offer-contact" href="https://wa.me/5491126442269?text=Hola%2C%20quiero%20consultar%20por%20mantenimiento%20o%20reparaci%C3%B3n%20de%20mi%20consola" target="_blank" rel="noopener noreferrer">Consultar por mantenimiento ↗</a></article>
 <article class="info-card"><h4>⚡ Flash y HEN</h4><p>Sección informativa para consultar por flash, OPL, HEN y organización visual de bibliotecas. Los procedimientos y las funciones disponibles varían según la consola y su configuración.</p></article>
 </div>
 <p class="info-note">Los nombres, formatos, tamaños y compatibilidades del catálogo son orientativos. Esta página no distribuye archivos de juegos; consultá por disponibilidad y compatibilidad antes de realizar un pedido.</p>
@@ -905,6 +928,20 @@ const games=[
 ];
 let currentConsole='PS2';const selected=new Set();
 function setConsole(c){currentConsole=c;document.getElementById('ps2tab').classList.toggle('active',c==='PS2');document.getElementById('ps3tab').classList.toggle('active',c==='PS3');renderGames()}
+function openConsoleSection(c){
+ setConsole(c);
+ const search=document.getElementById('search');if(search)search.value='';
+ const category=document.getElementById('category');if(category)category.value='Todos';
+ renderGames();
+ const title=document.getElementById('catalogo-title');
+ if(title)title.textContent=c==='PS2'?'🎮 Catálogo completo de PlayStation 2':'🎮 Catálogo e información de PlayStation 3';
+ const catalog=document.getElementById('catalogo-juegos');
+ if(catalog)catalog.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function openMaintenance(){
+ const target=document.getElementById('mantenimiento-reparacion');
+ if(target)target.scrollIntoView({behavior:'smooth',block:'center'});
+}
 function renderGames(){
  const q=document.getElementById('search').value.trim().toLowerCase(),cat=document.getElementById('category').value;
  const list=games.filter(g=>g.c===currentConsole&&g.n.toLowerCase().includes(q)&&(cat==='Todos'||g.cat===cat));
