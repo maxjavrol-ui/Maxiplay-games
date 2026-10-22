@@ -165,7 +165,7 @@ footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.not
   <p id="console-detail-copy"></p>
   <div id="console-detail-points" class="detail-points"></div>
 </section>
-<div class="layout">
+<div class="layout hide" id="catalog-layout">
 <section class="panel" id="catalogo-juegos">
 <h3 id="catalogo-title">🎮 Catálogo de juegos</h3>
 <div class="tabs"><button class="tab active" id="ps2tab" onclick="setConsole('PS2')">PlayStation 2</button><button class="tab" id="ps3tab" onclick="setConsole('PS3')">PlayStation 3</button></div>
@@ -1005,6 +1005,7 @@ const games=[
 let currentConsole='PS2';const selected=new Set();
 function setConsole(c){currentConsole=c;document.getElementById('ps2tab').classList.toggle('active',c==='PS2');document.getElementById('ps3tab').classList.toggle('active',c==='PS3');renderGames()}
 function openConsoleSection(c){
+ const catalogLayout=document.getElementById('catalog-layout');if(catalogLayout)catalogLayout.classList.remove('hide');
  setConsole(c);
  const search=document.getElementById('search');if(search)search.value='';
  const category=document.getElementById('category');if(category)category.value='Todos';
@@ -1032,6 +1033,8 @@ function openConsoleSection(c){
  else if(catalog)catalog.scrollIntoView({behavior:'smooth',block:'start'});
 }
 function openMaintenance(){
+ const catalogLayout=document.getElementById('catalog-layout');if(catalogLayout)catalogLayout.classList.add('hide');
+ const detail=document.getElementById('console-detail');if(detail)detail.classList.add('hide');
  const target=document.getElementById('mantenimiento-reparacion');
  if(target)target.scrollIntoView({behavior:'smooth',block:'center'});
 }
