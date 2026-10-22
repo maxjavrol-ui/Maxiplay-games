@@ -52,10 +52,37 @@ footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.not
 .offer-note{color:#9bb0c9;font-size:11px;line-height:1.5;margin:10px 0}
 .offer-contact{display:inline-flex;text-decoration:none;background:linear-gradient(100deg,#0967d8,#03bad5);color:#fff;font-weight:850;font-size:12px;padding:10px 13px;border-radius:9px}
 @media(min-width:760px){.offer-grid{grid-template-columns:1fr 1fr}.top-offers-inner{padding:21px}.usb-prices{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Nueva fachada visual gamer */
+.site-header{background:radial-gradient(circle at 88% 10%,#2630a64a,transparent 24%),linear-gradient(115deg,#080d1c,#101f3d 52%,#07101d);border-bottom:1px solid #2878a8}
+.site-header .brand{position:relative;z-index:1}.header-pixel{margin-left:auto;display:flex;align-items:center;gap:10px;color:#50e7ff;font-size:19px;text-shadow:0 0 15px #20cfff}.header-pixel span:nth-child(2){color:#ff9c4a}.header-pixel span:nth-child(3){color:#b38aff}
+.hero-showcase{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr;gap:16px;background:radial-gradient(ellipse at 80% 15%,#263c9c66,transparent 40%),radial-gradient(ellipse at 10% 90%,#007e9c30,transparent 40%),linear-gradient(125deg,#101c3a,#080d19 72%);border-color:#2d6b9e;min-height:250px}
+.hero-showcase:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#68dfff0b 1px,transparent 1px),linear-gradient(90deg,#68dfff0b 1px,transparent 1px);background-size:28px 28px;mask-image:linear-gradient(to right,transparent,black)}
+.hero-copy{position:relative;z-index:2}.hero-gradient{background:linear-gradient(90deg,#53efff,#7aa7ff 45%,#ffad5a);background-clip:text;-webkit-background-clip:text;color:transparent}
+.hero-showcase p{max-width:570px}.hero-art{height:215px;position:relative;isolation:isolate;overflow:hidden;border-radius:14px;background:radial-gradient(ellipse at 50% 60%,#1b73ac38,transparent 62%)}
+.art-orbit{position:absolute;border:1px solid #3ccfff45;border-radius:50%;transform:rotate(-20deg)}.orbit-one{width:290px;height:100px;left:50%;top:38%;margin-left:-145px}.orbit-two{width:240px;height:145px;left:50%;top:23%;margin-left:-120px;transform:rotate(28deg);border-color:#a58aff44}
+.mini-console{position:absolute;display:flex;align-items:center;gap:7px;height:28px;border:1px solid #91a7bf;border-radius:5px 9px 9px 5px;background:linear-gradient(180deg,#657387,#1a2537 40%,#090e18);box-shadow:0 12px 25px #0009,0 0 18px #31caff21;color:#d9e6f5;padding:0 9px;transform:skewY(-8deg);z-index:2}
+.mini-console small{font-size:7px;letter-spacing:1px;color:#b9d6e9}.mini-ps2{width:148px;left:5%;top:24%;height:38px}.mini-ps2 .console-mark{font-size:11px;color:#d6e9f7;font-weight:900}.mini-ps2 .console-slot{height:2px;width:45px;background:#080d15;box-shadow:0 1px #8495a9}.mini-ps2 .console-power{width:5px;height:5px;background:#50e8ff;border-radius:50%;margin-left:auto}
+.mini-ps3{width:160px;right:2%;top:53%;height:32px;border-radius:12px;background:repeating-linear-gradient(180deg,#606b7b 0 2px,#232d3b 2px 4px,#111824 4px 7px);transform:skewY(8deg)}.mini-ps3 .console-mark{font-size:11px;font-weight:900}.mini-ps3 .console-slot{height:2px;width:35px;background:#080d15}.mini-ps3 .console-power{width:5px;height:5px;background:#ff9e4b;border-radius:50%;margin-left:auto}
+.hero-pad{position:absolute;width:145px;height:auto;left:30%;top:40%;z-index:3;filter:drop-shadow(0 12px 12px #000b);transform:rotate(-9deg)}
+.art-spark{position:absolute;font-size:24px;color:#5eeeff;text-shadow:0 0 14px #40cfff;z-index:1}.spark-a{right:9%;top:13%}.spark-b{left:17%;bottom:10%;color:#ffb56e}
+.art-pixel-character{position:absolute;left:46%;top:6%;width:26px;height:45px;opacity:.85;filter:drop-shadow(0 0 12px #6b9cff);z-index:1}.pixel-head{position:absolute;left:7px;top:0;width:13px;height:13px;background:#ffb16c;box-shadow:0 0 0 4px #18264b}.pixel-body{position:absolute;left:5px;top:15px;width:17px;height:17px;background:#6b80ff}.pixel-arm{position:absolute;left:0;top:17px;width:5px;height:14px;background:#ffb16c;box-shadow:22px 0 #ffb16c}.pixel-leg{position:absolute;left:6px;top:32px;width:5px;height:12px;background:#42d9ff;box-shadow:10px 0 #42d9ff}
+.console-showcase{display:grid;grid-template-columns:1fr;gap:12px}
+.console-tile{position:relative;overflow:hidden;display:flex;align-items:center;gap:14px;padding:15px;border-radius:15px;border:1px solid #294e73;background:linear-gradient(115deg,#101e35,#08101e);min-width:0}
+.ps2-tile{border-color:#387c9c;background:radial-gradient(circle at 20% 50%,#2477a526,transparent 42%),linear-gradient(115deg,#101e35,#08101e)}
+.ps3-tile{border-color:#6854a2;background:radial-gradient(circle at 20% 50%,#8d65ff24,transparent 42%),linear-gradient(115deg,#151b38,#08101e)}
+.console-tile>div:nth-child(2){display:flex;flex-direction:column;gap:5px;min-width:0}.console-tile strong{font-size:14px}.console-tile small{font-size:11px;line-height:1.45;color:#aebfd5}.tile-symbol{margin-left:auto;color:#6ceaff33;font-size:25px;font-weight:950}
+.console-drawing{position:relative;flex-shrink:0;width:82px;height:57px;border:1px solid #8b9bb0;box-shadow:0 9px 15px #0008;display:flex;align-items:center;gap:5px;padding:8px;color:#edf5ff}
+.ps2-drawing{background:linear-gradient(120deg,#3b4656,#111827 65%,#050911);border-radius:4px;transform:skewY(-7deg)}
+.ps2-drawing:before{content:"";position:absolute;left:5px;right:5px;top:6px;height:2px;background:#8191a7}.ps2-drawing .draw-logo{font-size:12px;font-weight:900;letter-spacing:-1px}.draw-line{height:3px;width:25px;background:#080b12;border-top:1px solid #677a90}.draw-dot{position:absolute;right:6px;bottom:7px;width:5px;height:5px;border-radius:50%;background:#48e6ff}
+.ps3-drawing{height:46px;border-radius:13px 13px 5px 5px;background:repeating-linear-gradient(180deg,#596579 0 2px,#283448 2px 4px,#101725 4px 7px);transform:perspective(80px) rotateX(4deg)}
+.ps3-drawing:before{content:"";position:absolute;left:4px;right:4px;top:7px;height:1px;background:#8795a8}.ps3-drawing .draw-logo{font-size:11px;font-weight:900;letter-spacing:-1px}
+@media(min-width:760px){.hero-showcase{grid-template-columns:1.1fr .9fr;align-items:center;padding:24px}.hero-art{height:245px}.hero-pad{width:170px}.mini-ps2{left:4%;top:20%}.mini-ps3{right:1%;top:55%}.console-showcase{grid-template-columns:1fr 1fr}.hero-showcase h2{font-size:clamp(29px,4vw,43px)}}
+@media(max-width:420px){.header-pixel{gap:5px;font-size:15px}.console-tile{padding:12px;gap:10px}.console-drawing{width:70px}.tile-symbol{display:none}}
 </style>
 </head>
 <body>
-<header><div class="wrap brand"><div class="logo">✦</div><div><h1>MAXIPLAY <span>GAMES</span></h1><p class="sub">CATÁLOGO GAMER · PS2 + PS3 · ARMÁ TU PEDIDO</p></div></div></header>
+<header class="site-header"><div class="wrap brand"><div class="logo">✦</div><div><h1>MAXIPLAY <span>GAMES</span></h1><p class="sub">CATÁLOGO GAMER · PS2 + PS3 · ARMÁ TU PEDIDO</p></div><div class="header-pixel" aria-hidden="true"><span>✦</span><span>●</span><span>◆</span></div></div></header>
 <section class="top-offers" aria-label="Precios y servicios destacados">
   <div class="top-offers-inner">
     <div class="offer-heading"><span class="eyebrow">PRECIOS CLAROS · MAXIPLAY GAMES</span><h2>Elegí tu pendrive o prepará tu PS3</h2><p>Precios visibles desde el inicio para que encuentres rápido lo que necesitás.</p></div>
@@ -92,7 +119,20 @@ footer{text-align:center;color:#738aa5;font-size:11px;padding:8px 18px 28px}.not
   </a>
 </section>
 <main>
-<section class="hero"><div class="eyebrow">TU PRÓXIMA PARTIDA EMPIEZA ACÁ</div><h2>Elegí tus juegos.<br><span style="color:var(--cyan)">Calculá tu pendrive.</span></h2><p>Buscá títulos, seleccioná varios y revisá el espacio estimado antes de preparar tu consulta.</p><div class="chips"><span class="chip">⚡ Catálogo seleccionable</span><span class="chip">▣ Capacidad útil real</span><span class="chip">↗ Pedido por WhatsApp</span></div></section>
+<section class="hero hero-showcase">
+<div class="hero-copy"><div class="eyebrow">TU PRÓXIMA PARTIDA EMPIEZA ACÁ</div><h2>Viví el universo<br><span class="hero-gradient">Maxi Play Games.</span></h2><p>Explorá clásicos, elegí tus favoritos y armá tu pedido. Catálogo de PS2 y PS3, servicios y precios en un solo lugar.</p><div class="chips"><span class="chip">⚡ Catálogo seleccionable</span><span class="chip">🎮 Clásicos gamer</span><span class="chip">↗ Pedido por WhatsApp</span></div></div>
+<div class="hero-art" aria-label="Ilustraciones originales de consolas y controles">
+  <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+  <div class="mini-console mini-ps2"><span class="console-mark">PS2</span><span class="console-slot"></span><span class="console-power"></span><small>PLAYSTATION 2</small></div>
+  <div class="mini-console mini-ps3"><span class="console-mark">PS3</span><span class="console-slot"></span><span class="console-power"></span><small>SUPER SLIM</small></div>
+  <svg class="hero-pad" viewBox="0 0 220 125" role="img" aria-label="Joystick gamer ilustrado"><defs><linearGradient id="padShell" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#32465f"/><stop offset=".55" stop-color="#111e31"/><stop offset="1" stop-color="#060b14"/></linearGradient></defs><path d="M48 35 Q61 20 79 30 L97 40 L123 40 L141 30 Q159 20 172 35 Q188 53 198 88 Q202 104 190 108 Q178 112 166 96 L148 76 L72 76 L54 96 Q42 112 30 108 Q18 104 22 88 Q32 53 48 35Z" fill="url(#padShell)" stroke="#43dcff" stroke-width="2.5"/><path d="M54 50 H76 M65 39 V61" stroke="#b7e9ff" stroke-width="5" stroke-linecap="round"/><circle cx="143" cy="47" r="6" fill="#28c7ff"/><circle cx="162" cy="58" r="6" fill="#ff9b43"/><circle cx="143" cy="68" r="6" fill="#62e8a5"/><circle cx="124" cy="58" r="6" fill="#bc8bff"/><circle cx="85" cy="62" r="11" fill="#080e18" stroke="#607d99" stroke-width="2"/><circle cx="135" cy="84" r="11" fill="#080e18" stroke="#607d99" stroke-width="2"/><path d="M99 42 L121 42" stroke="#647e9b" stroke-width="3" stroke-linecap="round"/></svg>
+  <div class="art-spark spark-a">✦</div><div class="art-spark spark-b">✧</div><div class="art-pixel-character" aria-hidden="true"><span class="pixel-head"></span><span class="pixel-body"></span><span class="pixel-arm"></span><span class="pixel-leg"></span></div>
+</div>
+</section>
+<section class="console-showcase" aria-label="Consolas disponibles">
+  <article class="console-tile ps2-tile"><div class="console-drawing ps2-drawing" aria-hidden="true"><span class="draw-logo">PS2</span><span class="draw-line"></span><span class="draw-dot"></span></div><div><strong>PlayStation 2</strong><small>Clásicos · OPL · USB</small></div><span class="tile-symbol">02</span></article>
+  <article class="console-tile ps3-tile"><div class="console-drawing ps3-drawing" aria-hidden="true"><span class="draw-logo">PS3</span><span class="draw-line"></span><span class="draw-dot"></span></div><div><strong>PlayStation 3 Super Slim</strong><small>Catálogo · Configuración · HEN/CFW según compatibilidad</small></div><span class="tile-symbol">03</span></article>
+</section>
 <div class="layout">
 <section class="panel">
 <h3>🎮 Catálogo de juegos</h3>
